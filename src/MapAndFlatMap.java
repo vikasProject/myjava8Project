@@ -9,8 +9,8 @@ public class MapAndFlatMap {
 		List<Customer> customers=CustomerDatabase.getAll();
 		List<String> emails=customers.stream().map(customer->customer.getEmail()).collect(Collectors.toList());
 		List<List<String>> phoneNO = customers.stream().map(customer->customer.getPhoneNumbers()).collect(Collectors.toList());
-	//	System.out.println(emails);
-	//	System.out.println(phoneNO);
+		System.out.println(emails);
+	System.out.println(phoneNO);
 		
 		  List<String> flatmap = customers.stream().
 				  flatMap(customer->customer.getPhoneNumbers().stream())
